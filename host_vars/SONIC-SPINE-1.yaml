@@ -9,13 +9,13 @@ sonic_bgp:
 sonic_bgp_neighbors:
   - bgp_as: '{{bgp_asn}}'
     neighbors:
-      - neighbor: Eth1/1
+      - neighbor: Eth1/52
         peer_group: spine-leaf
-      - neighbor: Eth1/2
+      - neighbor: Eth1/53
         peer_group: spine-leaf
-      - neighbor: Eth1/3
+      - neighbor: Eth1/54
         peer_group: spine-leaf
-      - neighbor: Eth1/4
+      - neighbor: Eth1/56
         peer_group: spine-leaf
     peer_group:
       - '{{sonic_bgp_spineleaf_peergroup}}'
@@ -23,44 +23,44 @@ sonic_bgp_neighbors_af:
   - bgp_as: '{{bgp_asn}}'
     neighbors:
       - address_family: '{{sonic_bgp_fabriclink_neighbors_aflist}}'
-        neighbor: Eth1/1
+        neighbor: Eth1/52
       - address_family: '{{sonic_bgp_fabriclink_neighbors_aflist}}'
-        neighbor: Eth1/2
+        neighbor: Eth1/53
       - address_family: '{{sonic_bgp_fabriclink_neighbors_aflist}}'
-        neighbor: Eth1/3
+        neighbor: Eth1/54
       - address_family: '{{sonic_bgp_fabriclink_neighbors_aflist}}'
-        neighbor: Eth1/4
+        neighbor: Eth1/56
 sonic_config:
   lines: []
 sonic_interfaces:
   - description: '"Interlink to SONIC-LEAF-1 Eth1/54"'
     enabled: true
-    name: Eth1/1
+    name: Eth1/53
   - description: '"Interlink to SONIC-LEAF-2 Eth1/54"'
     enabled: true
-    name: Eth1/2
+    name: Eth1/54
   - description: '"Interlink to SONIC-LEAF-3 Eth1/54"'
     enabled: true
-    name: Eth1/3
+    name: Eth1/55
   - description: '"Interlink to SONIC-LEAF-4 Eth1/54"'
     enabled: true
-    name: Eth1/4
+    name: Eth1/56
   - description: router-id
     name: '{{ loopback_inf0 }}'
 sonic_l2_interfaces: []
 sonic_l3_interfaces:
   - ipv6:
       enabled: true
-    name: Eth1/1
+    name: Eth1/53
   - ipv6:
       enabled: true
-    name: Eth1/2
+    name: Eth1/54
   - ipv6:
       enabled: true
-    name: Eth1/3
+    name: Eth1/55
   - ipv6:
       enabled: true
-    name: Eth1/4
+    name: Eth1/56
   - ipv4:
       addresses:
         - address: '{{ loopback0_ip }}'

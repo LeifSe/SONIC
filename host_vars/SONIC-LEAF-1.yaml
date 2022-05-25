@@ -87,10 +87,10 @@ sonic_interfaces:
   - description: '"Uplink to SONIC-SPINE-1 Eth1/1"'
     enabled: true
     name: Eth1/54
-  - description: '"MCLAG to SONIC-LEAF-2 Eth1/55"'
+  - description: '"MCLAG to SONIC-LEAF-2 Eth1/53"'
     enabled: true
     name: Eth1/55
-  - description: '"MCLAG to SONIC-LEAF-2 Eth1/56"'
+  - description: '"MCLAG to SONIC-LEAF-2 Eth1/54"'
     enabled: true
     name: Eth1/56
   - description: router-id
@@ -150,10 +150,10 @@ sonic_l2_interfaces:
 sonic_l3_interfaces:
   - ipv6:
       enabled: true
-    name: Eth1/53
+    name: Eth1/55
   - ipv6:
       enabled: true
-    name: Eth1/54
+    name: Eth1/56
   - ipv4:
       addresses:
         - address: '{{ loopback0_ip }}'
