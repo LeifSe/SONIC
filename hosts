@@ -1,0 +1,20 @@
+SONIC-SPINE-1 ansible_host=10.67.194.1
+SONIC-LEAF-1 ansible_host=10.67.194.3
+SONIC-SPINE-2 ansible_host=10.67.194.2
+SONIC-LEAF-2 ansible_host=10.67.194.4
+SONIC-LEAF-3 ansible_host=10.67.194.5
+SONIC-LEAF-4 ansible_host=10.67.194.6
+
+[spine]
+SONIC-SPINE-1
+SONIC-SPINE-2
+
+[leaf]
+SONIC-LEAF-1
+SONIC-LEAF-2
+SONIC-LEAF-3
+SONIC-LEAF-4
+
+[SONIC:children]
+spine
+leaf
